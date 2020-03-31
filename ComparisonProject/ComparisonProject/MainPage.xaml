@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:comparisonproject="clr-namespace:ComparisonProject"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="ComparisonProject.MainPage">
+
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <sync:SfCheckBox Grid.Row="0" Grid.ColumnSpan="2" Margin="20,20,20,0" CheckedColor="#60a8fc" x:Name="grilledChicken" Text="Grilled Chicken"  FontSize="14" ></sync:SfCheckBox>
+            <sync:SfCheckBox Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,20,20" CheckedColor="#60a8fc"  Text="Chicken Tikka"  FontSize="14" >
+
+            </sync:SfCheckBox>
+
+            <sync:SfSwitch Grid.Column="0"
+                                 Grid.Row="2"
+                           Margin="30,0,0,0"
+                                         HorizontalOptions="Start"
+                                 AllowIndeterminateState="False"
+                                 VisualType="Material">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="SwitchSettings">
+                                    <Setter.Value>
+                                        <sync:DefaultSwitchSettings x:TypeArguments="sync:OnState"
+                                                            TrackWidthRequest="40"
+                                                            TrackHeightRequest="3"
+                                                            TrackCornerRadius="1"
+                                                            TrackColor="Gray"     
+                                                            ThumbWidthRequest="20"
+                                                            HasThumbShadow="True"
+                                                                    ThumbBorderColor="Transparent"
+                                                            ThumbHeightRequest="20"
+                                                            ThumbCornerRadius="10"
+                                                            ThumbColor="#60a8fc"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Off">
+                            <VisualState.Setters>
+                                <Setter Property="SwitchSettings">
+                                    <Setter.Value>
+                                        <sync:DefaultSwitchSettings x:TypeArguments="sync:OffState"
+                                                            TrackWidthRequest="40"
+                                                            TrackHeightRequest="3"
+                                                            TrackCornerRadius="1"
+                                                            TrackColor="Gray"     
+                                                            ThumbWidthRequest="20"
+                                                            HasThumbShadow="True"
+                                                            ThumbHeightRequest="20"
+                                                            ThumbCornerRadius="10"
+                                                            ThumbColor="White"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </sync:SfSwitch>
+            <Label Grid.Column="1" Grid.Row="2"
+                               Text="Refunds" 
+                       Margin="10,0,0,0"
+                                Style="{StaticResource checkBoxLabel}"
+                               VerticalOptions="Center"/>
+
+
+            <sync:SfSwitch Grid.Column="0"
+                                 Grid.Row="3"
+                           Margin="30,10,0,0"
+                                         HorizontalOptions="Start"
+                                 AllowIndeterminateState="False"
+                                 VisualType="Material">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="SwitchSettings">
+                                    <Setter.Value>
+                                        <sync:DefaultSwitchSettings x:TypeArguments="sync:OnState"
+                                                            TrackWidthRequest="40"
+                                                            TrackHeightRequest="3"
+                                                            TrackCornerRadius="1"
+                                                            TrackColor="Gray"     
+                                                            ThumbWidthRequest="20"
+                                                            HasThumbShadow="True"
+                                                                    ThumbBorderColor="Transparent"
+                                                            ThumbHeightRequest="20"
+                                                            ThumbCornerRadius="10"
+                                                            ThumbColor="#60a8fc"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Off">
+                            <VisualState.Setters>
+                                <Setter Property="SwitchSettings">
+                                    <Setter.Value>
+                                        <sync:DefaultSwitchSettings x:TypeArguments="sync:OffState"
+                                                            TrackWidthRequest="40"
+                                                            TrackHeightRequest="3"
+                                                            TrackCornerRadius="1"
+                                                            TrackColor="Gray"     
+                                                            ThumbWidthRequest="20"
+                                                            HasThumbShadow="True"
+                                                            ThumbHeightRequest="20"
+                                                            ThumbCornerRadius="10"
+                                                            ThumbColor="White"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </sync:SfSwitch>
+            <Label Grid.Column="1" Grid.Row="3"
+                               Text="Pending" 
+                       Margin="10,10,0,0"
+                                Style="{StaticResource checkBoxLabel}"
+                               VerticalOptions="Center"/>
+
+
+            <calendar:SfCalendar x:Name="calenar"
+                             HeightRequest="300"
+                              WidthRequest="300"
+                                 Grid.Row="4"
+                                 Grid.ColumnSpan="2"
+                                Margin="0,20,0,0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" 
+                               SelectionMode="RangeSelection">
+                <calendar:SfCalendar.MonthViewSettings>
+                    <calendar:MonthViewSettings 
+                    DateSelectionColor="#60a8fc"
+                    />
+                </calendar:SfCalendar.MonthViewSettings>
+            </calendar:SfCalendar>
+
+            <StackLayout x:Name="stack" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Aqua" Margin="0,30,0,0">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+
+                        <chart:ChartColorCollection x:Key="Colors">
+                            <Color>#C75299</Color>
+                            <Color>#B25EA3</Color>
+                            <Color>#9B6BAE</Color>
+                            <Color>#8279BB</Color>
+                            <Color>#6A86C6</Color>
+                            <Color>#5592D1</Color>
+                            <Color>#439CD9</Color>
+                        </chart:ChartColorCollection>
+
+                        <DataTemplate x:Key="dataMarkerTemplate">
+                            <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Padding="0,0,80,40">
+                                <Label Text="{Binding XValue}" VerticalOptions="Start" HorizontalTextAlignment="End" HorizontalOptions="Start" FontSize = "15"/>
+                            </StackLayout>
+                        </DataTemplate>
+
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <chart:SfChart.BindingContext>
+                        <comparisonproject:MultipleCircleViewModel x:Name="viewModel"/>
+                    </chart:SfChart.BindingContext>
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle FontSize="15" Text="Percentage of Loan Closure" />
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Series>
+                        <chart:DoughnutSeries DataMarkerPosition="Outside" EnableSmartLabels="True" StartAngle="-90" CapStyle="BothCurve" EndAngle="270" MaximumValue="100" CircularCoefficient="0.9" IsStackedDoughnut="true" x:Name="doughnutSeries" ItemsSource="{Binding DoughnutSeriesData}" LegendIcon="Circle" EnableAnimation="True">
+                            <chart:DoughnutSeries.DoughnutCoefficient>
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="0.3" Android="0.2" iOS="0.6" />
+                            </chart:DoughnutSeries.DoughnutCoefficient>
+                            <chart:DoughnutSeries.Spacing>
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="0.2" Android="0.4" iOS="0.4" />
+                            </chart:DoughnutSeries.Spacing>
+                            <chart:DoughnutSeries.ColorModel>
+                                <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
+                            </chart:DoughnutSeries.ColorModel>
+                            <chart:DoughnutSeries.DataMarker>
+                                <chart:ChartDataMarker LabelContent="YValue">
+                                    <chart:ChartDataMarker.LabelStyle>
+                                        <chart:DataMarkerLabelStyle LabelPosition="Outer"/>
+                                    </chart:ChartDataMarker.LabelStyle>
+                                </chart:ChartDataMarker>
+                            </chart:DoughnutSeries.DataMarker>
+                        </chart:DoughnutSeries>
+                    </chart:SfChart.Series>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend x:Name="legend" OverflowMode="Wrap" DockPosition="Bottom">
+                            <chart:ChartLegend.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Horizontal" x:Name="root" >
+                                        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label FontSize="15" TextColor="{Binding IconColor}" Text="{Binding DataPoint.YValue, StringFormat='{0:N}%'}"/>
+                                            <Label FontSize="13" VerticalTextAlignment="Center" Text="{Binding DataPoint.XValue}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </chart:ChartLegend.ItemTemplate>
+                        </chart:ChartLegend>
+                    </chart:SfChart.Legend>
+                </chart:SfChart>
+            </StackLayout>
+
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
